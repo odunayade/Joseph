@@ -1,0 +1,57 @@
+##To manually install Armitage on Kali Linux, you can follow these steps:
+##Install Java Development Kit (JDK):
+
+sudo apt update
+sudo apt install default-jdk
+##To manually install Armitage on Kali Linux, you can follow these steps:
+##Install Java Development Kit (JDK):
+
+sudo apt update
+sudo apt install default-jdk
+
+##Install Metasploit Framework:
+Armitage relies on the Metasploit Framework. You can install it by following these steps:
+
+sudo apt update
+sudo apt install metasploit-framework
+
+##Download Armitage:
+##Armitage is not included in the default Kali Linux repositories.
+
+mkdir armitage
+cd armitage
+wget http://www.fastandeasyhacking.com/download/armitage-latest.tgz
+
+##Extract Armitage:
+##Extract the downloaded Armitage package:
+
+tar -xvzf armitage-latest.tgz
+
+##Install PostgreSQL:
+##Armitage uses PostgreSQL for its database backend. Install it if you haven't already:
+
+sudo apt install postgresql
+
+##Initialize PostgreSQL Database:
+##Initialize the PostgreSQL database and start the service:
+
+sudo service postgresql start
+sudo msfdb init
+
+##Start Armitage:
+##Now, you can start Armitage:
+
+./armitage/armitage
+
+##If you encounter any issues related to permissions, you may need to change the permissions of the Armitage directory and its files:
+
+chmod -R 755 armitage
+
+##Connecting Armitage to Metasploit:
+
+    Launch Metasploit Framework: msfconsole
+    Start the RPC service: msgrpc -P <password> -S <host>
+    In Armitage, go to Hosts > msf > Configure..., and enter the RPC host and password.
+
+Enjoy Using Armitage:
+Once connected, you can start using Armitage for penetration testing and managing your Metasploit sessions.
