@@ -1,0 +1,10 @@
+##To insert content into a file using the vi text editor,                
+## Open the file using the vi editor:
+
+   vi filename
+
+##Replace filename with the name of the file you want to edit.
+##Press i to enter the insert mode. This mode allows you to type and insert text into the file.
+##Type or paste the content you want to insert into the file.
+
+
